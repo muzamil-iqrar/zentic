@@ -1,0 +1,134 @@
+:root {
+  /* Core Colors */
+  --zen-stone-gray: #A9B0A8;
+  --zen-bamboo-green: #A3B18A;
+  --zen-sand-beige: #E5DCC3;
+  --zen-moss-green: #6B8E23;
+  --zen-raked-white: #F9F7F1;
+  --zen-charcoal-slate: #444B47;
+  --primary: #11998e;
+  --secondary: #38ef7d;
+  --white: #ffffff;
+  --gray: #9b9b9b;
+
+  /* Accent Colors */
+  --zen-cherry-blossom: #F9CAD0;
+  --zen-lotus-purple: #B49FCC;
+
+  
+}
+
+/* Global Styles */
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--zen-sand-beige);
+  color: var(--zen-charcoal-slate);
+  justify-content: center;
+  font-family: 'Manrope', sans-serif;
+}
+
+
+h1, h2, h3 {
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+
+.button {
+  background-color: var(--zen-bamboo-green);
+  color: var(--zen-raked-white);
+}
+
+.button:hover {
+  background-color: var(--zen-moss-green);
+}
+
+
+
+/* TaskInput Styling */
+
+/* Form Styling */
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-block: 1rem;
+  width: 100%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid var(--gray);
+  outline: 0;
+  font-size: 1.3rem;
+  color: var(--zen-charcoal-slate);
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+
+
+/* Buttons */
+
+/* CSS */
+.btn {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:hover {
+  background-color: #fff;
+}
+
+.btn:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .btn {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
