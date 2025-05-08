@@ -1,39 +1,36 @@
 :root {
   /* Core Colors */
-  --zen-stone-gray: #A9B0A8;
-  --zen-bamboo-green: #A3B18A;
-  --zen-sand-beige: #E5DCC3;
-  --zen-moss-green: #6B8E23;
-  --zen-raked-white: #F9F7F1;
-  --zen-charcoal-slate: #444B47;
+  --zen-stone-gray: #a9b0a8;
+  --zen-bamboo-green: #a3b18a;
+  --zen-sand-beige: #e5dcc3;
+  --zen-moss-green: #6b8e23;
+  --zen-raked-white: #f9f7f1;
+  --zen-charcoal-slate: #444b47;
   --primary: #11998e;
   --secondary: #38ef7d;
   --white: #ffffff;
   --gray: #9b9b9b;
 
   /* Accent Colors */
-  --zen-cherry-blossom: #F9CAD0;
-  --zen-lotus-purple: #B49FCC;
-
-  
+  --zen-cherry-blossom: #f9cad0;
+  --zen-lotus-purple: #b49fcc;
 }
 
 /* Global Styles */
 body {
-  max-width: 1280px;
   margin: 0 auto;
   text-align: center;
   background-color: var(--zen-sand-beige);
   color: var(--zen-charcoal-slate);
   justify-content: center;
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
-
-h1, h2, h3 {
-  font-family: 'Zen Maru Gothic', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Zen Maru Gothic", sans-serif;
 }
-
 
 .button {
   background-color: var(--zen-bamboo-green);
@@ -43,8 +40,6 @@ h1, h2, h3 {
 .button:hover {
   background-color: var(--zen-moss-green);
 }
-
-
 
 /* TaskInput Styling */
 
@@ -93,7 +88,6 @@ h1, h2, h3 {
 .form__field:invalid {
   box-shadow: none;
 }
-
 
 /* Buttons */
 

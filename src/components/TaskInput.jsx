@@ -1,22 +1,28 @@
-const TaskInput = () => {
+const TaskInput = ({ task, setTask, onAddTask }) => {
   return (
     <>
-      <div class="form__group field">
+      <div className="form__group field">
         <input
           type="input"
-          class="form__field"
+          className="form__field"
+          value={task}
           placeholder="Enter your task"
           name="Task Input"
           id="task-input"
           required
+          onChange={(e) => {
+            setTask(e.target.value);
+          }}
         />
-        <label for="name" class="form__label">
+        <label htmlFor="name" className="form__label">
           Task Input
         </label>
       </div>
 
       <div className="task-input-submit"></div>
-      <input type="submit" value="Add Task" className="btn" />
+      <button className="btn" onClick={onAddTask}>
+        Add Task
+      </button>
     </>
   );
 };

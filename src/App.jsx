@@ -1,11 +1,11 @@
 import "./App.css";
-import TaskInput from "./components/TaskInput";
+import ToDoApp from "./components/ToDoApp";
 
 function App() {
   return (
     <>
       <h1>Zentic - To Do List</h1>
-      <TaskInput />
+      <ToDoApp />
     </>
   );
 }
