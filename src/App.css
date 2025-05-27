@@ -126,3 +126,43 @@ h3 {
     padding: 0 25px;
   }
 }
+
+
+/* Task List CSS */
+/* .task-list-wrapper{
+  di
+} */
+ul.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+}
+
+li.task-list-item{
+  
+display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 0.5em;
+      border-bottom: 1px solid var(--gray);
+}
+
+.task-boolean {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.btn.task-complete{
+  border-radius: 100%;
+  box-shadow: none;
+}
+
+.btn.task-complete {
+    box-shadow: none;
+    min-width: 20px;
+    height: 20px;
+    padding: 0;
+    align-items: center;
+}

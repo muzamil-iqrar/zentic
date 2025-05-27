@@ -14,12 +14,14 @@ const ToDoApp = () => {
     if (task.trim() != "") {
       setTaskList([...taskList, task]);
       setTask("");
+
+      console.log(taskList);
     }
   };
   return (
     <>
       <TaskInput task={task} setTask={setTask} onAddTask={handleAddTask} />
-      {/* <TaskList taskList="[Task 1 Added, Task 2 Added]" /> */}
+      <TaskList taskList={["Task 1", "Task2", "Code React JS for 30 min"]} />
     </>
   );
 };
