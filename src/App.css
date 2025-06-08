@@ -32,6 +32,14 @@ h3 {
   font-family: "Zen Maru Gothic", sans-serif;
 }
 
+button{
+  background-color: var(--zen-charcoal-slate);
+  border-radius: 0.25em;
+  line-height: 0;
+  padding: 0.2em;
+}
+
+
 .button {
   background-color: var(--zen-bamboo-green);
   color: var(--zen-raked-white);
@@ -165,4 +173,18 @@ display: flex;
     height: 20px;
     padding: 0;
     align-items: center;
+}
+
+/* Action Icons */
+.action-buttons{
+  display: flex;
+  gap: 0.4rem;
+}
+.icon-action{
+  fill: var(--zen-sand-beige);
+  font-size: 1.3rem
+}
+
+.completed{
+  background-color: var(--primary);
 }

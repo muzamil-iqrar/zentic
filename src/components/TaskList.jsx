@@ -1,4 +1,7 @@
-const TaskList = ({ taskList }) => {
+import { MdDelete } from "react-icons/md";
+import { MdEditSquare } from "react-icons/md";
+
+const TaskList = ({ taskList, onTaskComplete, isComplete }) => {
   return (
     <>
       {
@@ -7,11 +10,24 @@ const TaskList = ({ taskList }) => {
             {taskList.map((task, index) => (
               <li className="task-list-item" key={index}>
                 <div className="task-boolean">
-                  <button className="btn task-complete"></button>
+                  <button
+                    id={index}
+                    className={`btn task-complete ${
+                      isComplete ? "completed" : ""
+                    }`}
+                    onClick={onTaskComplete}
+                  ></button>
                   {task}
                 </div>
 
-                <button className="btn-secondary task-del">X</button>
+                <div className="action-buttons">
+                  <button className="btn-del">
+                    <MdDelete className="icon-action" />
+                  </button>
+                  <button className="btn-edit">
+                    <MdEditSquare className="icon-action" />
+                  </button>
+                </div>
               </li>
             ))}
           </ul>
