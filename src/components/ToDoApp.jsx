@@ -20,11 +20,16 @@ const ToDoApp = () => {
     }
   };
 
-  // 2. Task Completete Function
-  const handleTaskComplete = () => {
+  // 2. Delete Task Function
+  const handleDeleteTask = (index) => {
+    const updatedTaskList = taskList.filter((_, i) => i !== index);
+    setTaskList(updatedTaskList);
+  };
+
+  // 3. Task Completed
+  const handleTaskComplete = (index) => {
+    const completedTaskList = taskList.filter((_, i) => i !== index);
     setIsComplete(!isComplete);
-    console.log("Status:", isComplete);
-    console.log(taskList);
   };
 
   return (
@@ -33,7 +38,7 @@ const ToDoApp = () => {
       <TaskList
         taskList={taskList}
         onTaskComplete={handleTaskComplete}
-        isComplete={isComplete}
+        onDeleteTask={handleDeleteTask}
       />
     </>
   );

@@ -1,7 +1,7 @@
 import { MdDelete } from "react-icons/md";
 import { MdEditSquare } from "react-icons/md";
 
-const TaskList = ({ taskList, onTaskComplete, isComplete }) => {
+const TaskList = ({ taskList, onTaskComplete, onDeleteTask, isComplete }) => {
   return (
     <>
       {
@@ -15,14 +15,17 @@ const TaskList = ({ taskList, onTaskComplete, isComplete }) => {
                     className={`btn task-complete ${
                       isComplete ? "completed" : ""
                     }`}
-                    onClick={onTaskComplete}
+                    onClick={() => onTaskComplete(index)}
                   ></button>
                   {task}
                 </div>
 
                 <div className="action-buttons">
                   <button className="btn-del">
-                    <MdDelete className="icon-action" />
+                    <MdDelete
+                      className="icon-action"
+                      onClick={() => onDeleteTask(index)}
+                    />
                   </button>
                   <button className="btn-edit">
                     <MdEditSquare className="icon-action" />

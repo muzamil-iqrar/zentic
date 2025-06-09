@@ -23,7 +23,9 @@ body {
   background-color: var(--zen-sand-beige);
   color: var(--zen-charcoal-slate);
   justify-content: center;
+  align-items: flex-start;
   font-family: "Manrope", sans-serif;
+  padding: 4em;
 }
 
 h1,
